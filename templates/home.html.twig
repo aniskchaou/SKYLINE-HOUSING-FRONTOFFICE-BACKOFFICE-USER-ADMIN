@@ -1,14 +1,58 @@
 {% extends 'base.html.twig' %}
+
+
 {% block title %} 
-Home 
+ Home
 {% endblock %}
 
 {% block body %}
-{% for property in properties %}
 
-{{property.title}}
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>{{ form_start(form) }}
+             {{ form_widget(form) }}
+            <input type="submit" class="btn" value="Search" />
+            {{ form_end(form) }}
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<br>
 
-<a href="{{ path('show', {'id': property.id}) }}">{{property.title}}</a>
 
-{% endfor %}
+<div class="row">
+    {% for property in properties %}
+        <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+            {% if property.image %}
+            <img src="/images/properties/{{property.image}}" height="200" />
+            {% else %}
+            <img src="/images/logo-building.png" height="200">
+            {% endif %}
+            
+            
+            <span class="card-title">{{property.title}}</span>
+            </div>
+            <div class="card-content">
+            <p>
+            <b>{{property.title}}</b>
+            {{property.price}}
+            </p>
+            </div>
+            <div class="card-action">
+            <a href="{{ path('show', {'id': property.id}) }}">Détails</a>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+
+</div>
+<br>
+{{ knp_pagination_render(properties) }}
 {% endblock %}

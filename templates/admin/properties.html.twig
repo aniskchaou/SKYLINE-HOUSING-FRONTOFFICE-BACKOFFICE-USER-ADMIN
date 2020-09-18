@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %} 
+Home 
+{% endblock %}
+
+{% block body %}
+
+{% for message in app.flashes('info') %}
+    <div class="flash-info">
+        {{ message }}
+    </div>
+{% endfor %}
+
+
+<a href="{{ path('admin.property.create') }}">create</a>
+<table>
+<th><tr><td></td><td></td></th>
+{% for property in properties %}
+<tr>
+<td>
+{% if property.image %}
+<img src="/images/properties/{{property.image}}" height="40" width="40" />
+
+{% endif %}
+{{property.title}}
+</td><td>
+<a href="{{ path('admin.property.edit', {'id': property.id}) }}">edit</a>
+<a href="{{ path('admin.property.delete', {'id': property.id}) }}">delete</a>
+
+
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+

@@ -3,9 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Property;
+use App\Entity\PropertySearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-
+use Doctrine\ORM\Query;
 /**
  * @method Property|null find($id, $lockMode = null, $lockVersion = null)
  * @method Property|null findOneBy(array $criteria, array $orderBy = null)
@@ -27,6 +28,23 @@ class PropertyRepository extends ServiceEntityRepository
         ->getResult();
     }
 
+    public function findPagination(PropertySearch $search):Query
+    {
+        $query= $this->createQueryBuilder('p')
+        ->andWhere('p.sold = false');
+
+        if($search->getMaxPrice())
+        {
+            $query=$query->andWhere('p.price <= :maxprice')->setParameter(':maxprice',$search->getMaxPrice());
+        }
+
+        if($search->getMinSurface())
+        {
+            $query=$query->andWhere('p.price >= :minsurface')->setParameter(':minsurface',$search->getMinSurface());
+        }
+        
+        return $query->getQuery();
+    }
     public function findLastest()
     {
         return $this->createQueryBuilder('p')

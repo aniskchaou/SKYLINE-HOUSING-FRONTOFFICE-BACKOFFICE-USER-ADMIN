@@ -1,0 +1,12 @@
+ {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey }}</div>
+    {% endif %}
+
+
+<form method="post" action="{{path('login')}}">
+
+<input type="text" name="_username" value="{{last_username}}" />
+<input type="password" name="_password" />
+<input type="submit" value="login" />
+
+</form>
