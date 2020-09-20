@@ -1,12 +1,13 @@
 <nav>
     <div class="nav-wrapper">
       <ul class="left hide-on-med-and-down">
-        <li><a href="{{ path('home')}}">Acceuil</a></li>
+        <li><a href="{{ path('home')}}"><b>Skyline Housing</b></a></li>
+        <li><a href="{{ path('home')}}">Home</a></li>
         <li><a href="{{ path('properties')}}">Properties</a></li>
         <li><a href="{{ path('admin.property.index')}}">Administration</a></li>
         <li>
             {% if app.user  %}
-            <a href="{{path('logout')}}">Déconnexion</a>
+            <a href="{{path('logout')}}">Log Out</a>
             {%  endif  %}
         </li>
       </ul>

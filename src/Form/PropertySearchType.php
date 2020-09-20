@@ -16,9 +16,9 @@ class PropertySearchType extends AbstractType
     {
         $builder
             ->add('minSurface',IntegerType::class,
-            ['required'=>false,'label'=>false,'attr'=>['placeholder'=>'minimal surface']])
+            ['required'=>false,'label'=>false,'attr'=>['placeholder'=>'Minimal Surface']])
             ->add('maxPrice',IntegerType::class,
-            ['required'=>false,'label'=>false,'attr'=>['placeholder'=>'minimal surface']]);
+            ['required'=>false,'label'=>false,'attr'=>['placeholder'=>'Maximal Price']]);
            
     }
 
