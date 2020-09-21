@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Property;
 use App\Repository\PropertyRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class PropertyController  extends AbstractController{
 
@@ -30,27 +32,15 @@ class PropertyController  extends AbstractController{
     /**
      * @Route("/properties",name="properties")
      */
-    function index():Response
-    {  /*
-        $property = new Property();
-        $property->setTitle('Mon premier bien')
-            ->setPrice(200000)
-            ->setRooms(4)
-            ->setBedrooms(3)
-            ->setDescription('Une petite description')
-            ->setSurface(60)
-            ->setFloor(4)
-            ->setHeat(1)
-            ->setCity('Cholet')
-            ->setAddress('21 rue Emile Grasset')
-            ->setPostalCode('49300');
+    function index(Request $request, PropertyRepository $propertyRepository,PaginatorInterface $paginator):Response
+    {  
+        $properties = $paginator->paginate(
+            $propertyRepository->findAllPagination(), /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            6 /*limit per page*/
+        );
 
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($property);
-        */
-        $property=$this->repository->findNotSold();
-        $this->em->flush();
-        return new Response($this->renderView('properties.html.twig'));
+        return new Response($this->renderView('properties.html.twig',array('properties'=>$properties)));
     }
 }
 

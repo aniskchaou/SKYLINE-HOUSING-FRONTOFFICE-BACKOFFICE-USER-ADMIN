@@ -5,6 +5,36 @@ Our Properties
 {% endblock %}
 
 {% block body %}
-<h1>properties </h1>
 
+<div class="row">
+    {% for property in properties %}
+        <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+           
+            {% if property.image %}
+            <img src="/images/properties/{{property.image}}" height="200" />
+            {% else %}
+            <img src="/images/logo-building.png" height="200">
+            {% endif %}
+            
+            
+           
+            </div>
+            <div class="card-content">
+            <p>
+            <h5>{{property.title}}</h5>
+           <p> {{property.price}} €</p>
+            </p>
+            </div>
+            <div class="card-action">
+            <a href="{{ path('show', {'id': property.id}) }}" class="waves-effect waves-light btn" >Voir plus</a>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+
+</div>
+<br>
+{{ knp_pagination_render(properties) }}
 {% endblock %}

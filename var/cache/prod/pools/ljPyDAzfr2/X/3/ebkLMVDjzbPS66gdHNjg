@@ -1,0 +1,106 @@
+<?php //%255Bb9d1281192c7eaa6786f72c0ba4ae3f3%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT p0_.image AS image_0, p0_.id AS id_1, p0_.title AS title_2, p0_.description AS description_3, p0_.rooms AS rooms_4, p0_.surface AS surface_5, p0_.bedrooms AS bedrooms_6, p0_.floor AS floor_7, p0_.price AS price_8, p0_.heat AS heat_9, p0_.city AS city_10, p0_.address AS address_11, p0_.postal_code AS postal_code_12, p0_.sold AS sold_13, p0_.created_at AS created_at_14, p0_.updated_at AS updated_at_15 FROM property p0_ WHERE p0_.sold = false AND p0_.id IN (?)',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'p' => 'App\\Entity\\Property',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'image_0' => 'image',
+                    'id_1' => 'id',
+                    'title_2' => 'title',
+                    'description_3' => 'description',
+                    'rooms_4' => 'rooms',
+                    'surface_5' => 'surface',
+                    'bedrooms_6' => 'bedrooms',
+                    'floor_7' => 'floor',
+                    'price_8' => 'price',
+                    'heat_9' => 'heat',
+                    'city_10' => 'city',
+                    'address_11' => 'address',
+                    'postal_code_12' => 'postal_code',
+                    'sold_13' => 'sold',
+                    'created_at_14' => 'created_at',
+                    'updated_at_15' => 'updatedAt',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'p' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'image_0' => 'p',
+                    'id_1' => 'p',
+                    'title_2' => 'p',
+                    'description_3' => 'p',
+                    'rooms_4' => 'p',
+                    'surface_5' => 'p',
+                    'bedrooms_6' => 'p',
+                    'floor_7' => 'p',
+                    'price_8' => 'p',
+                    'heat_9' => 'p',
+                    'city_10' => 'p',
+                    'address_11' => 'p',
+                    'postal_code_12' => 'p',
+                    'sold_13' => 'p',
+                    'created_at_14' => 'p',
+                    'updated_at_15' => 'p',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'image_0' => 'App\\Entity\\Property',
+                    'id_1' => 'App\\Entity\\Property',
+                    'title_2' => 'App\\Entity\\Property',
+                    'description_3' => 'App\\Entity\\Property',
+                    'rooms_4' => 'App\\Entity\\Property',
+                    'surface_5' => 'App\\Entity\\Property',
+                    'bedrooms_6' => 'App\\Entity\\Property',
+                    'floor_7' => 'App\\Entity\\Property',
+                    'price_8' => 'App\\Entity\\Property',
+                    'heat_9' => 'App\\Entity\\Property',
+                    'city_10' => 'App\\Entity\\Property',
+                    'address_11' => 'App\\Entity\\Property',
+                    'postal_code_12' => 'App\\Entity\\Property',
+                    'sold_13' => 'App\\Entity\\Property',
+                    'created_at_14' => 'App\\Entity\\Property',
+                    'updated_at_15' => 'App\\Entity\\Property',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

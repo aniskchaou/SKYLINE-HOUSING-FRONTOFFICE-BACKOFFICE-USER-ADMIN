@@ -1,8 +1,94 @@
+
+
+
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %} 
 {{property.title}}
+{% endblock %}
+
+{% block body %}
+<style type="text/css">
+#detail_item{
+  color: rgba(238, 110, 115, 0.7);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease, background-color .28s ease;
+  transition: color .28s ease, background-color .28s ease;
+}
+
+</style>
+
+{% for message in app.flashes('info') %}
+    <div style=" border-color: #0288d1;
+  background-color: #29b6f6;
+  color: white; width:100%;
+  border: 1px solid;
+  padding:10px;
+  margin: 20px;
+  color: white;">
+        {{ message }}
+    </div>
+{% endfor %}
 
 
-{{ form_start(form) }}
+ <div class="card">
+    <div class="card-content">
+    <p>
+            {% if property.image %}
+            <img src="/images/properties/{{property.image}}" height="400" width="400" />
+            {% else %}
+            <img src="/images/logo-building.png" height="400" width="400">
+            {% endif %}
+     </p>       
+          <h2>{{property.title}}</h2>
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a class="active" href="#test4">information</a></li>
+        <li class="tab"><a  href="#test5">Contact</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4" style="text-align: left;">
+      <div id="test4">
+      <p>
+       <div >  <p class="flow-text"> <i class="material-icons">book</i> Description : </p> {{property.description}}</div><br>
+      <div> <p class="flow-text"><i class="material-icons">home</i> Rooms :</p> {{property.rooms}}</div><br>
+      <div>  <p class="flow-text"> <i class="material-icons">format_shapes</i> Surface :</p>{{property.surface}} m²</div><br>
+      <div>  <p class="flow-text"><i class="material-icons">confirmation_number</i> Bedroomds :</p>{{property.bedrooms}}</div><br>
+      <div>  <p class="flow-text"><i class="material-icons">attach_money</i>Price : </p> {{property.price}} €</div><br>
+      <div>  <p class="flow-text"><i class="material-icons">business</i> Floor : </p>{{property.floor}}</div><br>
+      <div>  <p class="flow-text"><i class="material-icons">location_city</i> City : </p>{{property.city}}</div><br>
+      <div>  <p class="flow-text"><i class="material-icons">location_on</i> Address : </p>{{property.address}}</div><br>
+      <div>  <p class="flow-text"><i class="material-icons">local_post_office</i> Postal Code :</p>{{property.postalCode}}</div><br>
+      
+
+      </p>
+      </div>
+      <div id="test5">
+      <br><br>
+      {{ form_start(form) }}
     {{ form_widget(form) }}
+    <br>
+    <input type="submit" class="btn" value="Contact" />
+    {{ form_end(form) }}
+      
+      
+      </div>
 
-    <input type="submit" class="btn" value="contact" />
-{{ form_end(form) }}
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+
+
+
+

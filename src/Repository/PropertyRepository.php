@@ -45,6 +45,15 @@ class PropertyRepository extends ServiceEntityRepository
         
         return $query->getQuery();
     }
+
+    public function findAllPagination():Query
+    {
+        $query= $this->createQueryBuilder('p')
+        ->andWhere('p.sold = false');
+
+        return $query->getQuery();
+    }
+
     public function findLastest()
     {
         return $this->createQueryBuilder('p')

@@ -1,36 +1,53 @@
 {% extends 'base.html.twig' %}
 {% block title %} 
-Home 
+Properties - Admin
 {% endblock %}
 
 {% block body %}
 
 {% for message in app.flashes('info') %}
-    <div class="flash-info">
+    <div style=" border-color: #0288d1;
+  background-color: #29b6f6;
+  color: white; width:100%;
+  border: 1px solid;
+  padding:10px;
+  margin: 20px;
+  color: white;">
         {{ message }}
     </div>
 {% endfor %}
 
-
-<a href="{{ path('admin.property.create') }}">create</a>
-<table>
-<th><tr><td></td><td></td></th>
+<table class="highlight">
+<thead>
+          <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>Sold</th>
+              <th>Created At</td>
+              <th>Actions</th>
+          </tr>
+        </thead>
+<tbody>        
 {% for property in properties %}
 <tr>
 <td>
-{% if property.image %}
-<img src="/images/properties/{{property.image}}" height="40" width="40" />
+ {% if property.image %}
+            <img src="/images/properties/{{property.image}}" height="40" width="40" />
+ {% else %}
+            <img src="/images/logo-building.png" height="40" width="40" >
+  {% endif %}
+</td>
 
-{% endif %}
-{{property.title}}
-</td><td>
-<a href="{{ path('admin.property.edit', {'id': property.id}) }}">edit</a>
-<a href="{{ path('admin.property.delete', {'id': property.id}) }}">delete</a>
-
-
+<td>{{property.title}}</td>
+<td>{{property.sold}}</td>
+<td><span class="chip"> {{property.createdAt|date('Y-m-d')}}</span></td>
+<td>
+<a href="{{ path('admin.property.edit', {'id': property.id}) }}" class="waves-effect orange btn-small">Edit</a>
+<a href="{{ path('admin.property.delete', {'id': property.id}) }}" class="waves-effect red btn-small">Delete</a>
 </td>
 </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endblock %}
 

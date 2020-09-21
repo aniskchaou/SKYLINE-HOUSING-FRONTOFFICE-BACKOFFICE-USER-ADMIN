@@ -67,8 +67,8 @@ class HomeController extends AbstractController {
 
 
           $mailer->send($message);
-          print($request);
-            $this->addFlash('info','property has been created');
+          //print($request);
+            $this->addFlash('info','Your email has been sent !');
         }
 
              ////////////

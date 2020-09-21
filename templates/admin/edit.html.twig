@@ -1,5 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %} 
+ Edit property
+{% endblock %}
+
+{% block body %}
+<div style="text-align: left;">
 {{ form_start(form) }}
     {{ form_widget(form) }}
 
-    <input type="submit" class="btn" value="Create" />
+    <input type="submit" class="btn" value="Edit" />
 {{ form_end(form) }}
+</div>
+{% endblock %}
