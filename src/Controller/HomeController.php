@@ -71,7 +71,7 @@ class HomeController extends AbstractController {
             $this->addFlash('info','property has been created');
         }
 
-
+             ////////////
         return new Response($this->renderView('show.html.twig',array('property'=>$property,'form' => $form->createView() )));
 
     }
