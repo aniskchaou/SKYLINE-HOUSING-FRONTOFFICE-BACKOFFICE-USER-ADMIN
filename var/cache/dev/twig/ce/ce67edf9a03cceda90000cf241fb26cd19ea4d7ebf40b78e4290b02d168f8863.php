@@ -803,6 +803,6 @@ class __TwigTemplate_ac4d77051869847649000a70d71336f363a9f0bfe6d0f2f3e915160271c
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "D:\\agence-immo\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\config.html.twig");
     }
 }

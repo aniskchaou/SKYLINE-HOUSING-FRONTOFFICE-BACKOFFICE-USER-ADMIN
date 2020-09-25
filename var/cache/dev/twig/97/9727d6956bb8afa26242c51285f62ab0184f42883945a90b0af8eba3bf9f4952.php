@@ -710,6 +710,6 @@ class __TwigTemplate_279aa1aa89c528be022b3465ccd84a58ea4d748ad4fe416445f5ca75ae1
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "D:\\agence-immo\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
+", "@WebProfiler/Collector/mailer.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\mailer.html.twig");
     }
 }

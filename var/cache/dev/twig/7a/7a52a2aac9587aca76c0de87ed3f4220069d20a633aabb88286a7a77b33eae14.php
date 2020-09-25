@@ -1882,6 +1882,6 @@ class __TwigTemplate_29636feabea06ffdea34eadad3ca19e43f61eea0c4992fe66cbc864fd68
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "D:\\agence-immo\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

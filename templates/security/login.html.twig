@@ -1,18 +1,12 @@
  {% extends 'base.html.twig' %}
- {% block title %} 
- Login
-{% endblock %}
+ {% block title %} Login{% endblock %}
 
 {% block body %}
 
+<!-- message -->
 {% if error %}
-        <div style=" border-color: #d32f2f;
-  background-color: #ef5350;
-  color: white; width:100%;
-  border: 1px solid;
-  padding:10px;
-  margin: 20px;
-  color: white;">{{ error.messageKey }}</div>
+        <div style=" border-color: #d32f2f;background-color: #ef5350; color: white; width:100%;
+          border: 1px solid;padding:10px;margin: 20px;color: white;">{{ error.messageKey }}</div>
 {% endif %}
 
 <div class="section"></div>

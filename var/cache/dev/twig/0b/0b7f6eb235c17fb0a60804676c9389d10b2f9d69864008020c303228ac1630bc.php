@@ -898,6 +898,6 @@ class __TwigTemplate_c835a6a37f3fd2599bf3412282825f2ab38a6cec38c4285ec06ee2ad9d1
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "D:\\agence-immo\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
     }
 }

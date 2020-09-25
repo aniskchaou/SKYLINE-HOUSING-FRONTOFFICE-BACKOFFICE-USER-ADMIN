@@ -60,31 +60,38 @@ class __TwigTemplate_57f6443ba92abc15642c1c60946119a7b2566f3dd2c865d72b75741c48b
         // line 6
         echo "</head>
 <body>
+ <!-- menu -->
  ";
-        // line 8
+        // line 9
         echo twig_include($this->env, $context, "menu/menu.html.twig");
         echo "
+
   <div class=\"section no-pad-bot\" id=\"index-banner\">
+    <!-- container -->
     <div class=\"container\">
       <br><br>
+      
+      <!-- body -->
       <div class=\"row center\">
        ";
-        // line 13
+        // line 18
         $this->displayBlock('body', $context, $blocks);
-        // line 14
+        // line 19
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 15
+        // line 20
         echo "      </div> 
         <br>
     </div>
   </div>
+   
+   <!-- footer -->
    ";
-        // line 19
+        // line 26
         echo twig_include($this->env, $context, "include/footer.html.twig");
         echo "
    ";
-        // line 20
+        // line 27
         echo twig_include($this->env, $context, "include/scripts.html.twig");
         echo "
   </body>
@@ -135,7 +142,7 @@ class __TwigTemplate_57f6443ba92abc15642c1c60946119a7b2566f3dd2c865d72b75741c48b
 
     }
 
-    // line 13
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -153,7 +160,7 @@ class __TwigTemplate_57f6443ba92abc15642c1c60946119a7b2566f3dd2c865d72b75741c48b
 
     }
 
-    // line 14
+    // line 19
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -183,7 +190,7 @@ class __TwigTemplate_57f6443ba92abc15642c1c60946119a7b2566f3dd2c865d72b75741c48b
 
     public function getDebugInfo()
     {
-        return array (  157 => 14,  139 => 13,  121 => 5,  102 => 4,  88 => 20,  84 => 19,  78 => 15,  75 => 14,  73 => 13,  65 => 8,  61 => 6,  59 => 5,  55 => 4,  51 => 3,  47 => 1,);
+        return array (  164 => 19,  146 => 18,  128 => 5,  109 => 4,  95 => 27,  91 => 26,  83 => 20,  80 => 19,  78 => 18,  66 => 9,  61 => 6,  59 => 5,  55 => 4,  51 => 3,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -195,10 +202,15 @@ class __TwigTemplate_57f6443ba92abc15642c1c60946119a7b2566f3dd2c865d72b75741c48b
         {% block stylesheets %}{% endblock %}
 </head>
 <body>
+ <!-- menu -->
  {{ include('menu/menu.html.twig') }}
+
   <div class=\"section no-pad-bot\" id=\"index-banner\">
+    <!-- container -->
     <div class=\"container\">
       <br><br>
+      
+      <!-- body -->
       <div class=\"row center\">
        {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
@@ -206,10 +218,12 @@ class __TwigTemplate_57f6443ba92abc15642c1c60946119a7b2566f3dd2c865d72b75741c48b
         <br>
     </div>
   </div>
+   
+   <!-- footer -->
    {{ include('include/footer.html.twig') }}
    {{ include('include/scripts.html.twig') }}
   </body>
 </html>
-", "base.html.twig", "D:\\agence-immo\\templates\\base.html.twig");
+", "base.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\base.html.twig");
     }
 }

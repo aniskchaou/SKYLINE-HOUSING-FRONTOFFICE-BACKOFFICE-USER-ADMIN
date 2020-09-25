@@ -413,6 +413,6 @@ class __TwigTemplate_06f7c849b36f57d47f3322e1c0ce62483c66b693ecffd56fc7ad54b93e5
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "D:\\agence-immo\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
     }
 }

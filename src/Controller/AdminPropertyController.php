@@ -35,8 +35,10 @@ class AdminPropertyController  extends AbstractController{
      */
     function index():Response
     {  
+        //find all
         $properties=$this->repository->findAll();
         $this->em->flush();
+
         return new Response($this->renderView('admin/properties.html.twig',array('properties'=>$properties)));
     }
 
@@ -45,45 +47,23 @@ class AdminPropertyController  extends AbstractController{
      */
     function edit(Request $request,ValidatorInterface $validator):Response
     {
+        //show form
         $id=$request->query->get('id');
         $property=$this->repository->find($id);
         $form = $this->createForm(PropertyType::class, $property);
         $form->handleRequest($request);
 
+        //post query
         if ($form->isSubmitted() && $form->isValid()){
-            
-            
-            
-            
-            
+
+            //validation form
             $errors = $validator->validate($property);
-
             if (count($errors) > 0) {
-                /*
-                * Uses a __toString method on the $errors variable which is a
-                * ConstraintViolationList object. This gives us a nice string
-                * for debugging.
-                */
                 $errorsString = (string) $errors;
-
                 return new Response($errorsString);
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+            //show message
             $this->em->flush();
             $this->addFlash('info','property has been updated');
             return $this->redirectToRoute('admin.property.index');
@@ -100,17 +80,19 @@ class AdminPropertyController  extends AbstractController{
      */
     function create(Request $request):Response
     {
-        
+        //show form
         $property=new Property();
         $form = $this->createForm(PropertyType::class, $property);
         $form->handleRequest($request);
         
+        //save property
         if ($form->isSubmitted() && $form->isValid()){
             $this->em->persist($property);
             $this->em->flush();
             $this->addFlash('info','property has been created');
             return $this->redirectToRoute('admin.property.index');
         }
+        
 
         return new Response($this->renderView('admin/create.html.twig',array(
         'property'=>$property ,
@@ -123,10 +105,12 @@ class AdminPropertyController  extends AbstractController{
      */
     function delete(Request $request):Response
     {
-        
+        //remove property
         $id=$request->query->get('id');
         $property=$this->repository->find($id);
         $this->em->remove($property);
+
+        //show message
         $this->em->flush();
         $this->addFlash('info','property has been deleted');
         return $this->redirectToRoute('admin.property.index');

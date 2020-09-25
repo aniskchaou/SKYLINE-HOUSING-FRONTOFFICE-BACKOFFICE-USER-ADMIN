@@ -1,6 +1,4 @@
 <?php
-
-// src/AppBundle/Entity/User.php
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -33,9 +31,6 @@ class User implements UserInterface, \Serializable
 
     public function __construct()
     {
-       
-        // may not be needed, see section on salt below
-        // $this->salt = md5(uniqid('', true));
     }
 
     public function getUsername()
@@ -80,8 +75,6 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
-            // see section on salt below
-            // $this->salt,
         ));
     }
 
@@ -92,8 +85,6 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
-            // see section on salt below
-            // $this->salt
         ) = unserialize($serialized);
     }
 }

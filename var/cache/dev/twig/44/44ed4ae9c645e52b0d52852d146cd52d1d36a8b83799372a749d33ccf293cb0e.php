@@ -482,6 +482,6 @@ class __TwigTemplate_706b11cc06ee5047083efe73fd74775f3716918a445d5616ad95ab8e7ae
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "D:\\agence-immo\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
     }
 }

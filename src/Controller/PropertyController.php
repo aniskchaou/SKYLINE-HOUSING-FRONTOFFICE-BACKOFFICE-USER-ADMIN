@@ -23,10 +23,11 @@ class PropertyController  extends AbstractController{
      */
     private  $em;
 
-   public function __construct(PropertyRepository $repository, EntityManagerInterface $em) {
+
+    public function __construct(PropertyRepository $repository, EntityManagerInterface $em) {
        $this->repository = $repository;
        $this->em=$em;
-   }
+    }
    
    
     /**
@@ -34,10 +35,11 @@ class PropertyController  extends AbstractController{
      */
     function index(Request $request, PropertyRepository $propertyRepository,PaginatorInterface $paginator):Response
     {  
+        //pagination
         $properties = $paginator->paginate(
-            $propertyRepository->findAllPagination(), /* query NOT result */
-            $request->query->getInt('page', 1), /*page number*/
-            6 /*limit per page*/
+            $propertyRepository->findAllPagination(), 
+            $request->query->getInt('page', 1), 
+            6 
         );
 
         return new Response($this->renderView('properties.html.twig',array('properties'=>$properties)));

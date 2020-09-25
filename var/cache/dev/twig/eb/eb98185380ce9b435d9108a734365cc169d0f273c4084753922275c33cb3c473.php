@@ -318,6 +318,6 @@ class __TwigTemplate_5213b5ad1b63c2185b9fce7001d4b4cb94c0cbc1e19a3da3caddf404cc0
     {% endif %}
     </ul>
 {% endif %}
-", "@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig", "D:\\agence-immo\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\twitter_bootstrap_v3_pagination.html.twig");
+", "@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\twitter_bootstrap_v3_pagination.html.twig");
     }
 }

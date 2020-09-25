@@ -144,6 +144,6 @@ Create property
     <input type=\"submit\" class=\"btn\" value=\"Create\" />
 {{ form_end(form) }}
 </div>
-{% endblock %}", "admin/create.html.twig", "D:\\agence-immo\\templates\\admin\\create.html.twig");
+{% endblock %}", "admin/create.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\admin\\create.html.twig");
     }
 }

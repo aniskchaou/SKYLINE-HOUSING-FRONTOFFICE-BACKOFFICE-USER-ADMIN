@@ -197,6 +197,6 @@ class __TwigTemplate_c5393ca85e8bf1ee4bffddb6c137cfd7fd5bf72bca7048424a7acc53eac
         {% endif %}
     </div>
 {% endif %}
-", "@KnpPaginator/Pagination/sliding.html.twig", "D:\\agence-immo\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\sliding.html.twig");
+", "@KnpPaginator/Pagination/sliding.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\sliding.html.twig");
     }
 }

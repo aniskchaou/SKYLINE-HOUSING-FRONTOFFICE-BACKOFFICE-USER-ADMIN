@@ -69,6 +69,6 @@ class __TwigTemplate_a03603bb5c073a6c6de276e55dabddeb5e09506c7f9eb9745d0635af7ee
   <script src=\"https://code.jquery.com/jquery-2.1.1.min.js\"></script>
   <script src=\"/js/materialize.js\"></script>
   <script src=\"/js/init.js\"></script>
-", "include/scripts.html.twig", "D:\\agence-immo\\templates\\include\\scripts.html.twig");
+", "include/scripts.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\include\\scripts.html.twig");
     }
 }

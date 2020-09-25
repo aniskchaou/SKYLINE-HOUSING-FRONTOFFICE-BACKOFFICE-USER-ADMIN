@@ -16,24 +16,21 @@ use App\Entity\Contact;
 
 class HomeController extends AbstractController {
 
-    /**
+     /**
      * @Route("/",name="home")
      */
     function index(Request $request, PropertyRepository $propertyRepository,PaginatorInterface $paginator):Response
     {
-       //$properties=$propertyRepository->findLastest();
-        
-       $propertySearch=new PropertySearch();
+        //create form
+        $propertySearch=new PropertySearch();
         $form = $this->createForm(PropertySearchType::class, $propertySearch);
         $form->handleRequest($request);
 
-
-
-       $properties = $paginator->paginate(
-        $propertyRepository->findPagination($propertySearch), /* query NOT result */
-        $request->query->getInt('page', 1), /*page number*/
-        6 /*limit per page*/
-    );
+        //pagination
+        $properties = $paginator->paginate(
+        $propertyRepository->findPagination($propertySearch), 
+        $request->query->getInt('page', 1), 
+        6 );
 
         return new Response($this->renderView('home.html.twig',array('properties'=>$properties,'form' => $form->createView() )));
     }
@@ -43,7 +40,7 @@ class HomeController extends AbstractController {
      */
     function show(PropertyRepository $propertyRepository,Request $request,\Swift_Mailer $mailer):Response
     {
-        //return new Response($this->renderView('show.html.twig',array('slug'=>$request->request->get('slug'))));
+        //show form
         $id=$request->query->get('id');
         $property=$propertyRepository->find($id);
         $contact=new Contact();
@@ -51,14 +48,15 @@ class HomeController extends AbstractController {
         $form=$this->createForm(ContactType::class,$contact);
         $form->handleRequest($request);
         
+        //retrieve post query
         if ($form->isSubmitted() && $form->isValid()){
             
+            //send email
             $message = (new \Swift_Message('Hello Email'))
             ->setFrom('send@example.com')
             ->setTo('recipient@example.com')
             ->setBody(
                 $this->renderView(
-                    // templates/emails/registration.html.twig
                     'emails/contact.html.twig',
                     ['contact' => $contact]
                 ),
@@ -66,12 +64,13 @@ class HomeController extends AbstractController {
             );
 
 
-          $mailer->send($message);
-          //print($request);
+            $mailer->send($message);
+
+            //show confirmation message
             $this->addFlash('info','Your email has been sent !');
         }
 
-             ////////////
+
         return new Response($this->renderView('show.html.twig',array('property'=>$property,'form' => $form->createView() )));
 
     }

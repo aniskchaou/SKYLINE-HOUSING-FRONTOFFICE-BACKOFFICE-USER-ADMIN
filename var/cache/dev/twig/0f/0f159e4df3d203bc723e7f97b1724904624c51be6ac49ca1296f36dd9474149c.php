@@ -60,7 +60,7 @@ class __TwigTemplate_1ebc30e5aa177d6d231aa29befbd61183ad3e925bac8e860489545e2fc8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.property.index");
         echo "\">Administration</a></li>
         
-        
+            <!-- admin -->
             ";
         // line 10
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10)) {
@@ -112,7 +112,7 @@ class __TwigTemplate_1ebc30e5aa177d6d231aa29befbd61183ad3e925bac8e860489545e2fc8
         <li><a href=\"{{ path('properties')}}\">Properties</a></li>
         <li><a href=\"{{ path('admin.property.index')}}\">Administration</a></li>
         
-        
+            <!-- admin -->
             {% if app.user  %}
             <li><a href=\"{{ path('admin.property.create') }}\" >Create property</a></li>
             <li><a href=\"{{path('logout')}}\">Log Out</a></li>
@@ -120,6 +120,6 @@ class __TwigTemplate_1ebc30e5aa177d6d231aa29befbd61183ad3e925bac8e860489545e2fc8
         
       </ul>
     </div>
-</nav>", "menu/menu.html.twig", "D:\\agence-immo\\templates\\menu\\menu.html.twig");
+</nav>", "menu/menu.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\menu\\menu.html.twig");
     }
 }

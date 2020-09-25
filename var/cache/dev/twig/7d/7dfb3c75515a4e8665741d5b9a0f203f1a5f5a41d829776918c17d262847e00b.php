@@ -69,6 +69,6 @@ class __TwigTemplate_3ced83d2e8daa4e401d545f5f6a6f3a08d746f49ddc4138832e0878dd9e
       <div class=\"container\">
       Made by <a class=\"orange-text text-lighten-3\" href=\"https://github.com/aniskchaou/REALESTATE-SYMFONY-5\">Anis KCHAOU</a>
       </div>  
-  </footer>", "include/footer.html.twig", "D:\\agence-immo\\templates\\include\\footer.html.twig");
+  </footer>", "include/footer.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\include\\footer.html.twig");
     }
 }

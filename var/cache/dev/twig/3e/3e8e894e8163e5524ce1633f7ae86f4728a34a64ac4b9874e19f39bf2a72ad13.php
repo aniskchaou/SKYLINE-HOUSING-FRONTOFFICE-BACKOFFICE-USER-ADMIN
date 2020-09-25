@@ -291,6 +291,6 @@ class __TwigTemplate_b578b3c1dff2376268a1963857dd14b4fdb3a27bb0861597e7b1a0f7d21
         </tbody>
     </table>
 {% endblock %}
-", "@VichUploader/Collector/mapping_collector.html.twig", "D:\\agence-immo\\vendor\\vich\\uploader-bundle\\templates\\Collector\\mapping_collector.html.twig");
+", "@VichUploader/Collector/mapping_collector.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\vich\\uploader-bundle\\templates\\Collector\\mapping_collector.html.twig");
     }
 }

@@ -1006,6 +1006,6 @@ class __TwigTemplate_b4e04ca4e5971f7aa38de0eeb6599aea05dfa34e747c19d5a8473009d74
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "D:\\agence-immo\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\swiftmailer.html.twig");
     }
 }

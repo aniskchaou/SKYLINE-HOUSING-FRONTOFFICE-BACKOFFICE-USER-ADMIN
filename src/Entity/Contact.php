@@ -1,6 +1,5 @@
 <?php
 
-// src/AppBundle/Entity/User.php
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -12,23 +11,15 @@ class Contact
     
 
     private $firstname;
-
-
     private $lastname;
-
     private $phone;
-
     private $email;
-
     private $message;
-
     private $property;
 
     public function __construct()
     {
-       
-        // may not be needed, see section on salt below
-        // $this->salt = md5(uniqid('', true));
+
     }
     
     public function getFirstName()

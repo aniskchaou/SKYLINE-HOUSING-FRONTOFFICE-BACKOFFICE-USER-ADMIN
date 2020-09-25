@@ -144,6 +144,6 @@ class __TwigTemplate_dd6e519f3c0e2a422c21548ce962a6e80f0854bc1d010056377bed2cae2
     <input type=\"submit\" class=\"btn\" value=\"Edit\" />
 {{ form_end(form) }}
 </div>
-{% endblock %}", "admin/edit.html.twig", "D:\\agence-immo\\templates\\admin\\edit.html.twig");
+{% endblock %}", "admin/edit.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\admin\\edit.html.twig");
     }
 }

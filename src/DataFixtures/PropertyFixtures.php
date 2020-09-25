@@ -9,11 +9,11 @@ use App\Entity\Property;
 
 class PropertyFixtures extends Fixture
 {
+    //using faker to insert data
     public function load(ObjectManager $manager)
     {
         $faker=Factory::create('fr_FR');
-        // $product = new Product();
-        // $manager->persist($product);
+       
         for ($i=0; $i < 10 ; $i++) { 
             $property = new Property();
             $property->setTitle($faker->words(3,true))

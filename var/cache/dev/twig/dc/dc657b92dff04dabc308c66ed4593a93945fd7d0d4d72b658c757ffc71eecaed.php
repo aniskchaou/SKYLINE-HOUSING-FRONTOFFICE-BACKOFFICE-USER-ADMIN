@@ -642,6 +642,6 @@ class __TwigTemplate_349e408f5c6a630c588d11b22b9e058049902e81a6205a0a49f0ca52137
         }());
     </script>
 {% endblock %}
-", "@WebProfiler/Profiler/layout.html.twig", "D:\\agence-immo\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\layout.html.twig");
+", "@WebProfiler/Profiler/layout.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\layout.html.twig");
     }
 }

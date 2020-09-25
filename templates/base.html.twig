@@ -5,10 +5,15 @@
         {% block stylesheets %}{% endblock %}
 </head>
 <body>
+ <!-- menu -->
  {{ include('menu/menu.html.twig') }}
+
   <div class="section no-pad-bot" id="index-banner">
+    <!-- container -->
     <div class="container">
       <br><br>
+      
+      <!-- body -->
       <div class="row center">
        {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
@@ -16,6 +21,8 @@
         <br>
     </div>
   </div>
+   
+   <!-- footer -->
    {{ include('include/footer.html.twig') }}
    {{ include('include/scripts.html.twig') }}
   </body>

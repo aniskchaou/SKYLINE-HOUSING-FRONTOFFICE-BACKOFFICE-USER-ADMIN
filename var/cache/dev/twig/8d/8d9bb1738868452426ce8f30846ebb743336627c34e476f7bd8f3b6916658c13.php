@@ -65,9 +65,7 @@ class __TwigTemplate_8eac7fa0f8aa7d5d8cafc64ce7b818ed8bb3e57ef39f04f100044a226ec
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo " 
- Login
-";
+        echo " Login";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -76,7 +74,7 @@ class __TwigTemplate_8eac7fa0f8aa7d5d8cafc64ce7b818ed8bb3e57ef39f04f100044a226ec
 
     }
 
-    // line 6
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -86,25 +84,21 @@ class __TwigTemplate_8eac7fa0f8aa7d5d8cafc64ce7b818ed8bb3e57ef39f04f100044a226ec
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
+        // line 5
         echo "
+<!-- message -->
 ";
-        // line 8
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })())) {
+        // line 7
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
+            // line 8
+            echo "        <div style=\" border-color: #d32f2f;background-color: #ef5350; color: white; width:100%;
+          border: 1px solid;padding:10px;margin: 20px;color: white;\">";
             // line 9
-            echo "        <div style=\" border-color: #d32f2f;
-  background-color: #ef5350;
-  color: white; width:100%;
-  border: 1px solid;
-  padding:10px;
-  margin: 20px;
-  color: white;\">";
-            // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })()), "messageKey", [], "any", false, false, false, 15), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 9, $this->source); })()), "messageKey", [], "any", false, false, false, 9), "html", null, true);
             echo "</div>
 ";
         }
-        // line 17
+        // line 11
         echo "
 <div class=\"section\"></div>
   <main>
@@ -118,7 +112,7 @@ class __TwigTemplate_8eac7fa0f8aa7d5d8cafc64ce7b818ed8bb3e57ef39f04f100044a226ec
         <div class=\"z-depth-1 grey lighten-4 row\" style=\"display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;\">
 
          <form method=\"post\" action=\"";
-        // line 29
+        // line 23
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\">
             <div class='row'>
@@ -175,26 +169,20 @@ class __TwigTemplate_8eac7fa0f8aa7d5d8cafc64ce7b818ed8bb3e57ef39f04f100044a226ec
 
     public function getDebugInfo()
     {
-        return array (  122 => 29,  108 => 17,  103 => 15,  95 => 9,  93 => 8,  90 => 7,  80 => 6,  59 => 2,  36 => 1,);
+        return array (  116 => 23,  102 => 11,  97 => 9,  94 => 8,  92 => 7,  88 => 5,  78 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source(" {% extends 'base.html.twig' %}
- {% block title %} 
- Login
-{% endblock %}
+ {% block title %} Login{% endblock %}
 
 {% block body %}
 
+<!-- message -->
 {% if error %}
-        <div style=\" border-color: #d32f2f;
-  background-color: #ef5350;
-  color: white; width:100%;
-  border: 1px solid;
-  padding:10px;
-  margin: 20px;
-  color: white;\">{{ error.messageKey }}</div>
+        <div style=\" border-color: #d32f2f;background-color: #ef5350; color: white; width:100%;
+          border: 1px solid;padding:10px;margin: 20px;color: white;\">{{ error.messageKey }}</div>
 {% endif %}
 
 <div class=\"section\"></div>
@@ -244,6 +232,6 @@ class __TwigTemplate_8eac7fa0f8aa7d5d8cafc64ce7b818ed8bb3e57ef39f04f100044a226ec
   </main>
 {% endblock %}
 
- ", "security/login.html.twig", "D:\\agence-immo\\templates\\security\\login.html.twig");
+ ", "security/login.html.twig", "D:\\projects\\REALESTATE-SYMFONY-5\\templates\\security\\login.html.twig");
     }
 }
